@@ -1,9 +1,10 @@
 package bitcoin
 
 import (
+	"testing"
+
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestSignBip0322(t *testing.T) {

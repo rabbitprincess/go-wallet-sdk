@@ -6,10 +6,11 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/crypto/ed25519"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 var (

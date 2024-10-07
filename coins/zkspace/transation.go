@@ -2,8 +2,9 @@ package zkspace
 
 import (
 	"encoding/hex"
-	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 	"math/big"
+
+	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 )
 
 func CreateChangePubKeyTx(accountId uint32, from string, newPkHash string, nonce uint32, ethSignature []byte) ChangePubKey {

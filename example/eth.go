@@ -6,6 +6,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"math/big"
+
 	"github.com/btcsuite/btcd/btcec"
 	btcec2 "github.com/btcsuite/btcd/btcec/v2"
 	"github.com/decred/dcrd/dcrec/secp256k1/v4"
@@ -15,7 +17,6 @@ import (
 	"github.com/okx/go-wallet-sdk/crypto/bip32"
 	"github.com/okx/go-wallet-sdk/util"
 	"github.com/tyler-smith/go-bip39"
-	"math/big"
 )
 
 func GenerateMnemonic() (string, error) {

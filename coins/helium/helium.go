@@ -2,6 +2,7 @@ package helium
 
 import (
 	"encoding/base64"
+
 	"github.com/okx/go-wallet-sdk/coins/helium/keypair"
 	"github.com/okx/go-wallet-sdk/coins/helium/transactions"
 )

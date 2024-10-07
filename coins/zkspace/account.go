@@ -2,6 +2,7 @@ package zkspace
 
 import (
 	"encoding/hex"
+
 	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 )
 

@@ -2,9 +2,10 @@ package zil
 
 import (
 	json2 "encoding/json"
-	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestSignTransaction(t *testing.T) {

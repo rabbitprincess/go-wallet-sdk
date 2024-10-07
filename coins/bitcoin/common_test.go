@@ -1,8 +1,9 @@
 package bitcoin
 
 import (
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestIsHexString(t *testing.T) {

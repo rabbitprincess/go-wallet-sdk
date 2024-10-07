@@ -2,9 +2,10 @@ package tezos
 
 import (
 	"encoding/hex"
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/coins/tezos/types"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 const (

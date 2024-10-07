@@ -6,6 +6,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+
 	"github.com/eoscanada/eos-go/ecc"
 
 	"io"

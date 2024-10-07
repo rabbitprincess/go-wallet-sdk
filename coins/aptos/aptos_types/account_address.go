@@ -3,9 +3,10 @@ package aptos_types
 import (
 	"encoding/hex"
 	"errors"
+	"strings"
+
 	"github.com/okx/go-wallet-sdk/coins/aptos/bcs"
 	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
-	"strings"
 )
 
 const LENGTH = 32

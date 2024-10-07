@@ -20,8 +20,9 @@ package secp256k1
 import (
 	"crypto/cipher"
 	"fmt"
-	"go.dedis.ch/kyber/v3/util/random"
 	"math/big"
+
+	"go.dedis.ch/kyber/v3/util/random"
 )
 
 // q is the field characteristic (cardinality) of the secp256k1 base field. All

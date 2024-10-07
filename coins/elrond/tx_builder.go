@@ -6,6 +6,7 @@ import (
 	crypto_rand "crypto/rand"
 	"encoding/hex"
 	"encoding/json"
+
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"golang.org/x/crypto/sha3"
 )

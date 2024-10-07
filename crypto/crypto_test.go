@@ -11,6 +11,11 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	"fmt"
+	"io"
+	"os"
+	"strings"
+	"testing"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/btcutil"
@@ -19,10 +24,6 @@ import (
 	"github.com/okx/go-wallet-sdk/crypto/bip32"
 	bip39 "github.com/tyler-smith/go-bip39"
 	"golang.org/x/crypto/sha3"
-	"io"
-	"os"
-	"strings"
-	"testing"
 )
 
 func TestNewChildKeyByPathString(t *testing.T) {

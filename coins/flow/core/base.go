@@ -4,8 +4,9 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/ethereum/go-ethereum/rlp"
 	"strings"
+
+	"github.com/ethereum/go-ethereum/rlp"
 )
 
 // A Transaction is a full transaction object containing a payload and signatures.

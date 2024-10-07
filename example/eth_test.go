@@ -2,8 +2,9 @@ package example
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 // testcode https://sepolia.etherscan.io/address/0x2354aa76877c6043bf30119eb23bf3fdd02c4808

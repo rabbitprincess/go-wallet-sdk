@@ -10,14 +10,15 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"math/bits"
+	"strconv"
+	"strings"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	ecdsa2 "github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/dchest/blake2b"
 	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 	"github.com/okx/go-wallet-sdk/util"
-	"math/bits"
-	"strconv"
-	"strings"
 )
 
 var (

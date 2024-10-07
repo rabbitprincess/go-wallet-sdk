@@ -3,8 +3,9 @@ package terra
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 	"io"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 )
 
 const (

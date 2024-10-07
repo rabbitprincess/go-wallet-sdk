@@ -2,8 +2,9 @@ package cbor
 
 import (
 	"errors"
-	"github.com/okx/go-wallet-sdk/crypto/cbor"
 	"math"
+
+	"github.com/okx/go-wallet-sdk/crypto/cbor"
 )
 
 const invalidVersion = math.MaxUint16

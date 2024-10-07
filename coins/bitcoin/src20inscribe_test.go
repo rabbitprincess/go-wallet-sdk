@@ -2,8 +2,9 @@ package bitcoin
 
 import (
 	"encoding/json"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 
 	"github.com/btcsuite/btcd/chaincfg"
 )

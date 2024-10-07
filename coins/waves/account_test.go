@@ -1,10 +1,11 @@
 package waves
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/waves/crypto"
-	"github.com/okx/go-wallet-sdk/coins/waves/types"
 	"reflect"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/waves/crypto"
+	"github.com/okx/go-wallet-sdk/coins/waves/types"
 )
 
 func Test_newAddressFromPublicKeyHash(t *testing.T) {

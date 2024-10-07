@@ -2,9 +2,10 @@ package bitcoin
 
 import (
 	"encoding/json"
+	"testing"
+
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestInscribe(t *testing.T) {

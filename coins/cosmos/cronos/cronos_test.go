@@ -1,10 +1,11 @@
 package cronos
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/cosmos"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos"
+	"github.com/stretchr/testify/require"
 )
 
 // https://testnet-croeseid-4.crypto.org:1317/cosmos/auth/v1beta1/accounts/tcro1rvs5xph4l3px2efynqsthus8p6r4exyrgkhe6v

@@ -2,10 +2,11 @@ package crypto
 
 import (
 	"crypto/ecdsa"
-	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 	"math/big"
 	"reflect"
 	"testing"
+
+	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 )
 
 func TestSecp256k1Key_PubKey(t *testing.T) {

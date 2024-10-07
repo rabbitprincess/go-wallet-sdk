@@ -2,6 +2,7 @@ package bitcoin
 
 import (
 	"encoding/hex"
+
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/txscript"

@@ -1,8 +1,14 @@
 package starknet
 
 import (
+	"bytes"
 	"crypto/elliptic"
+	"crypto/sha256"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
 	"math/big"
+	"os"
 )
 
 /**
@@ -36,14 +42,6 @@ SOFTWARE.
 	It is recommended to use in the same way(i.e. `curve.Sign` and not `ecdsa.Sign`).
 
 */
-import (
-	"bytes"
-	"crypto/sha256"
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"os"
-)
 
 var sc StarkCurve
 

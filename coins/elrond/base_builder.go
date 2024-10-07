@@ -3,8 +3,9 @@ package elrond
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/btcsuite/btcd/btcutil/bech32"
 	"math/big"
+
+	"github.com/btcsuite/btcd/btcutil/bech32"
 )
 
 type baseBuilder struct {

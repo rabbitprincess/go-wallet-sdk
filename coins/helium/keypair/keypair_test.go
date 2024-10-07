@@ -2,8 +2,9 @@ package keypair
 
 import (
 	"encoding/hex"
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 var kp = New(Ed25519Version)

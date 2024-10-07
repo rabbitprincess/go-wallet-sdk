@@ -2,10 +2,11 @@ package waves
 
 import (
 	"encoding/json"
-	"github.com/okx/go-wallet-sdk/coins/waves/crypto"
-	"github.com/okx/go-wallet-sdk/coins/waves/types"
 	"reflect"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/waves/crypto"
+	"github.com/okx/go-wallet-sdk/coins/waves/types"
 )
 
 const (

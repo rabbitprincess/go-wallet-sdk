@@ -15,8 +15,9 @@ Copyright (c) 2018 SmartContract ChainLink, Ltd.
 package secp256k1
 
 import (
-	"go.dedis.ch/kyber/v3"
 	"math/big"
+
+	"go.dedis.ch/kyber/v3"
 
 	secp256k1BTCD "github.com/btcsuite/btcd/btcec"
 )

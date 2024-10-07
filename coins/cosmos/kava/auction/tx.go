@@ -3,8 +3,9 @@ package auction
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 	"io"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 )
 
 // MsgPlaceBid represents a message used by bidders to place bids on auctions

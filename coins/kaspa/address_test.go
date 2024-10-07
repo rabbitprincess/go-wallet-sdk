@@ -1,9 +1,10 @@
 package kaspa
 
 import (
+	"testing"
+
 	"github.com/kaspanet/kaspad/domain/dagconfig"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestNewAddress(t *testing.T) {

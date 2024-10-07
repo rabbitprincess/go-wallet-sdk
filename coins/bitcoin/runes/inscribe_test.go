@@ -4,11 +4,12 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
+	"math/big"
+	"testing"
+
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"math/big"
-	"testing"
 )
 
 func TestBuildOpReturnData_forRunesMain(t *testing.T) {

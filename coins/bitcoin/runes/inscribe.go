@@ -5,6 +5,10 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"errors"
+	"math/big"
+	"sort"
+	"strings"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg"
@@ -12,9 +16,6 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/okx/go-wallet-sdk/coins/bitcoin"
-	"math/big"
-	"sort"
-	"strings"
 )
 
 var (

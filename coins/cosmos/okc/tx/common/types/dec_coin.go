@@ -3,9 +3,10 @@ package types
 import (
 	"errors"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/amino"
 	"sort"
 	"strings"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/amino"
 )
 
 // DecCoin defines a coin which can have additional decimal points

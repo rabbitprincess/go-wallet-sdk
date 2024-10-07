@@ -4,9 +4,10 @@ import (
 	"crypto/ed25519"
 	"crypto/rand"
 	"encoding/hex"
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/crypto/base58"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestNewAccount(t *testing.T) {

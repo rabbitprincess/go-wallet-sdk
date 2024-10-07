@@ -3,12 +3,13 @@ package aptos_types
 import (
 	"errors"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/aptos/bcs"
-	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
 	"reflect"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/okx/go-wallet-sdk/coins/aptos/bcs"
+	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
 )
 
 type TypeTag interface {

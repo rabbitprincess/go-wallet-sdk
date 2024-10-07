@@ -1,8 +1,9 @@
 package aptos
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestAptosWallet_GetRandomPrivateKey(t *testing.T) {

@@ -3,8 +3,9 @@ package polkadot
 import (
 	"crypto/ed25519"
 	"encoding/hex"
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestAddress(t *testing.T) {

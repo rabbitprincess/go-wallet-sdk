@@ -10,10 +10,11 @@ import (
 	"crypto/rand"
 	"crypto/sha512"
 	"fmt"
+	"math/big"
+
 	"golang.org/x/crypto/blake2b"
 	"golang.org/x/crypto/nacl/secretbox"
 	"golang.org/x/crypto/pbkdf2"
-	"math/big"
 )
 
 const (

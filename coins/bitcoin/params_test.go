@@ -2,11 +2,12 @@ package bitcoin
 
 import (
 	"encoding/hex"
+	"testing"
+
 	btcec "github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestNewZECAddr(t *testing.T) {

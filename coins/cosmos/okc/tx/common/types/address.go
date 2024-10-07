@@ -6,8 +6,9 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/btcsuite/btcd/btcutil/bech32"
 	"strings"
+
+	"github.com/btcsuite/btcd/btcutil/bech32"
 )
 
 // Address is a common interface for different types of addresses used by the SDK

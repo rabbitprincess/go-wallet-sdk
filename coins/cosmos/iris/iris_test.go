@@ -1,10 +1,11 @@
 package iris
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/cosmos"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos"
+	"github.com/stretchr/testify/require"
 )
 
 // https://lcd-iris.keplr.app/cosmos/auth/v1beta1/accounts/iaa1rvs5xph4l3px2efynqsthus8p6r4exyrt6k4ya

@@ -4,11 +4,12 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"math/big"
+
 	"github.com/ethereum/go-ethereum/common"
 	vrfProof "github.com/okx/go-wallet-sdk/coins/oracle/vrf/proof"
 	"github.com/okx/go-wallet-sdk/crypto/vrf/secp256k1"
 	"github.com/shopspring/decimal"
-	"math/big"
 )
 
 type VRFResponse struct {

@@ -3,11 +3,12 @@ package ethereum
 import (
 	"encoding/hex"
 	"fmt"
+	"math/big"
+	"testing"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"math/big"
-	"testing"
 
 	"github.com/okx/go-wallet-sdk/coins/ethereum/token"
 )

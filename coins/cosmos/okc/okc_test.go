@@ -1,13 +1,14 @@
 package okc
 
 import (
+	"testing"
+	"time"
+
 	"github.com/okx/go-wallet-sdk/coins/cosmos"
 	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx"
 	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/common/types"
 	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/token"
 	"github.com/stretchr/testify/require"
-	"testing"
-	"time"
 )
 
 // /// note that one public key may be against two accounts

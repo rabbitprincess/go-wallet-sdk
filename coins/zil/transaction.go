@@ -6,14 +6,15 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"math/big"
+	"strconv"
+	"strings"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/okx/go-wallet-sdk/coins/zil/keytools"
 	"github.com/okx/go-wallet-sdk/coins/zil/protobuf"
 	"github.com/okx/go-wallet-sdk/coins/zil/util"
 	"google.golang.org/protobuf/proto"
-	"math/big"
-	"strconv"
-	"strings"
 )
 
 var bintZero = big.NewInt(0)

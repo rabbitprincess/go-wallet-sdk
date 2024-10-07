@@ -1,9 +1,10 @@
 package eos
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/eos/types"
 	"reflect"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/eos/types"
 )
 
 func TestHexToChecksum256(t *testing.T) {

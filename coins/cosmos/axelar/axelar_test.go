@@ -1,9 +1,10 @@
 package axelar
 
 import (
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/coins/cosmos"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 // https://k8s-testnet-axelarco-c0dd71f944-b4c8da2f814e7b8f.elb.us-east-2.amazonaws.com:1317/cosmos/auth/v1beta1/accounts/axelar1rvs5xph4l3px2efynqsthus8p6r4exyr6kqvdd

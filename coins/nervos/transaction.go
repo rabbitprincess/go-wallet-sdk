@@ -3,6 +3,7 @@ package nervos
 import (
 	"encoding/binary"
 	"errors"
+
 	"github.com/okx/go-wallet-sdk/coins/nervos/crypto"
 	"github.com/okx/go-wallet-sdk/coins/nervos/types"
 )

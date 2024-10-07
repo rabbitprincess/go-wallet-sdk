@@ -8,9 +8,10 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"math/big"
+
 	"github.com/okx/go-wallet-sdk/coins/ton/tlb"
 	"github.com/okx/go-wallet-sdk/coins/ton/tvm/cell"
-	"math/big"
 )
 
 // code hex from https://github.com/ton-blockchain/highload-wallet-contract-v3/commit/3d2843747b14bc2a8915606df736d47490cd3d49

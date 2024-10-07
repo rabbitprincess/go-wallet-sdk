@@ -2,10 +2,11 @@ package harmony
 
 import (
 	"encoding/hex"
+	"math/big"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/okx/go-wallet-sdk/coins/ethereum"
-	"math/big"
 )
 
 const HRP = "one"

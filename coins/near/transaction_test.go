@@ -2,13 +2,14 @@ package near
 
 import (
 	"encoding/base64"
+	"math/big"
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/coins/near/serialize"
 	"github.com/okx/go-wallet-sdk/crypto/base58"
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"math/big"
-	"testing"
 )
 
 func TestCreateTransaction(t *testing.T) {

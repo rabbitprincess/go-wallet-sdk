@@ -6,8 +6,9 @@
 package cbor
 
 import (
-	"github.com/okx/go-wallet-sdk/crypto/cbor"
 	"io"
+
+	"github.com/okx/go-wallet-sdk/crypto/cbor"
 )
 
 // RawMessage is a raw encoded CBOR value. It implements Marshaler and

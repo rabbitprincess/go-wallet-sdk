@@ -1,10 +1,11 @@
 package filecoin
 
 import (
-	"github.com/okx/go-wallet-sdk/util"
-	"github.com/stretchr/testify/assert"
 	"math/big"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/util"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewTx(t *testing.T) {

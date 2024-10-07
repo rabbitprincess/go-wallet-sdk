@@ -2,9 +2,10 @@ package stacks
 
 import (
 	"encoding/json"
-	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestTransfer(t *testing.T) {

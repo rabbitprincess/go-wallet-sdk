@@ -4,12 +4,13 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"errors"
+	"strings"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/okx/go-wallet-sdk/crypto/base58"
-	"strings"
 )
 
 func NewAddress(chainId string, hrp string, publicKey *btcec.PublicKey) (string, error) {

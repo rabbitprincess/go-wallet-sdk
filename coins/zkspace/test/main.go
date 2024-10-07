@@ -4,10 +4,11 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/zkspace"
-	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 	"math/big"
 	"strings"
+
+	"github.com/okx/go-wallet-sdk/coins/zkspace"
+	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 )
 
 func main() {

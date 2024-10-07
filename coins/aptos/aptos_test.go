@@ -4,17 +4,18 @@ import (
 	cryptoed25519 "crypto/ed25519"
 	cryptorand "crypto/rand"
 	"encoding/hex"
-	"github.com/okx/go-wallet-sdk/coins/aptos/aptos_types"
-	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
-	"github.com/okx/go-wallet-sdk/crypto/ed25519"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 	"io"
 	"math"
 	"math/big"
 	"strconv"
 	"strings"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/aptos/aptos_types"
+	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
+	"github.com/okx/go-wallet-sdk/crypto/ed25519"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestShortenAddress(t *testing.T) {

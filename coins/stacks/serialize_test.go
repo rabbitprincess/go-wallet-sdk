@@ -4,10 +4,11 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"math/big"
 	"reflect"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSerializeBoolCV(t *testing.T) {

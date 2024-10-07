@@ -3,6 +3,8 @@ package ethereum
 import (
 	"encoding/hex"
 	"encoding/json"
+	"math/big"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
@@ -11,7 +13,6 @@ import (
 	"github.com/okx/go-wallet-sdk/coins/ethereum/token"
 	"github.com/okx/go-wallet-sdk/util"
 	"golang.org/x/crypto/sha3"
-	"math/big"
 )
 
 // generate tx with json param

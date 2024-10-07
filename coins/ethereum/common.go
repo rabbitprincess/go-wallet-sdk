@@ -3,11 +3,12 @@ package ethereum
 import (
 	"encoding/hex"
 	"fmt"
+	"math/big"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
-	"math/big"
 )
 
 const AddressLength = 20

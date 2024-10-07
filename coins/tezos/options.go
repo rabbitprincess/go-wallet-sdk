@@ -2,8 +2,9 @@ package tezos
 
 import (
 	"encoding/json"
-	"github.com/okx/go-wallet-sdk/coins/tezos/types"
 	"strconv"
+
+	"github.com/okx/go-wallet-sdk/coins/tezos/types"
 )
 
 var DefaultOptions = CallOptions{

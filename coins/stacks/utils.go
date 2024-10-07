@@ -7,11 +7,12 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/crypto/base58"
 	"math/big"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/okx/go-wallet-sdk/crypto/base58"
 
 	"golang.org/x/crypto/ripemd160"
 )

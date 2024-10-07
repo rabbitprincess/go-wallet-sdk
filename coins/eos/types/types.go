@@ -24,6 +24,7 @@ package types
 import (
 	"encoding/hex"
 	"encoding/json"
+
 	"github.com/eoscanada/eos-go/ecc"
 )
 

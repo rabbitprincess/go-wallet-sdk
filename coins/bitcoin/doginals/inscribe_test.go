@@ -1,10 +1,11 @@
 package doginals
 
 import (
+	"testing"
+
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestNewDogeAddr(t *testing.T) {

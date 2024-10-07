@@ -2,9 +2,10 @@ package brc20
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestReveal(t *testing.T) {

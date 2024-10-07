@@ -2,9 +2,10 @@ package waves
 
 import (
 	"crypto/rand"
+	"io"
+
 	"github.com/okx/go-wallet-sdk/coins/waves/crypto"
 	"github.com/okx/go-wallet-sdk/coins/waves/types"
-	"io"
 )
 
 // account

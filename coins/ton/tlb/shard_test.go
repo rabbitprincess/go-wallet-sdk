@@ -6,8 +6,9 @@ package tlb
 
 import (
 	"encoding/hex"
-	"github.com/okx/go-wallet-sdk/coins/ton/tvm/cell"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/ton/tvm/cell"
 )
 
 func TestShardState_LoadFromCell(t *testing.T) {

@@ -8,9 +8,10 @@ package proof
 
 import (
 	"fmt"
+	"math/big"
+
 	"github.com/okx/go-wallet-sdk/crypto/vrf/secp256k1"
 	"github.com/okx/go-wallet-sdk/crypto/vrf/utils"
-	"math/big"
 
 	"go.dedis.ch/kyber/v3"
 )

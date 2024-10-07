@@ -4,10 +4,11 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"testing"
+
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestVerify(t *testing.T) {

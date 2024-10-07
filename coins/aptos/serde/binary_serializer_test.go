@@ -2,9 +2,10 @@ package serde
 
 import (
 	"encoding/hex"
-	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestBinarySerializer_SerializeU64(t *testing.T) {

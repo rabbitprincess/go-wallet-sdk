@@ -1,10 +1,11 @@
 package tia
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/cosmos"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos"
+	"github.com/stretchr/testify/require"
 )
 
 func TestNewAddress(t *testing.T) {

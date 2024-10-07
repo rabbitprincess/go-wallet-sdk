@@ -3,8 +3,9 @@ package hard
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 	"io"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 )
 
 // MsgDeposit defines the Msg/Deposit request type.

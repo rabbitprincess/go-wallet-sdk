@@ -1,10 +1,11 @@
 package eos
 
 import (
-	"github.com/eoscanada/eos-go/ecc"
-	"github.com/stretchr/testify/require"
 	"reflect"
 	"testing"
+
+	"github.com/eoscanada/eos-go/ecc"
+	"github.com/stretchr/testify/require"
 )
 
 func TestSigDigest(t *testing.T) {

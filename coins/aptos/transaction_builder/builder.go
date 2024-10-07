@@ -2,6 +2,7 @@ package transaction_builder
 
 import (
 	"errors"
+
 	"github.com/okx/go-wallet-sdk/coins/aptos/aptos_types"
 	"github.com/okx/go-wallet-sdk/coins/aptos/bcs"
 )

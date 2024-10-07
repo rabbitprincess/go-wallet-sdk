@@ -3,8 +3,9 @@ package osmo
 import (
 	"crypto/rand"
 	"encoding/hex"
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 
 	time "time"
 

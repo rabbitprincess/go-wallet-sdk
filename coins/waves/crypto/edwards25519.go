@@ -7,8 +7,9 @@ Copyright (c) 2018 WavesPlatform
 package crypto
 
 import (
-	"github.com/agl/ed25519/edwards25519"
 	"io"
+
+	"github.com/agl/ed25519/edwards25519"
 )
 
 // GenerateWavesKey generates a public/private key pair using randomness from rand.

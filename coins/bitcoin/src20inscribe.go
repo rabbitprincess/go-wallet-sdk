@@ -4,6 +4,8 @@ import (
 	"crypto/rc4"
 	"encoding/hex"
 	"errors"
+	"strings"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg"
@@ -11,7 +13,6 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/okx/go-wallet-sdk/util"
-	"strings"
 )
 
 const PART_LEN = 31

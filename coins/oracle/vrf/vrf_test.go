@@ -2,11 +2,12 @@ package vrf
 
 import (
 	"encoding/hex"
+	"math/big"
+	"testing"
+
 	vrfProof "github.com/okx/go-wallet-sdk/coins/oracle/vrf/proof"
 	"github.com/okx/go-wallet-sdk/crypto/vrf/secp256k1"
 	"github.com/stretchr/testify/require"
-	"math/big"
-	"testing"
 )
 
 func TestInitPreSeedData(t *testing.T) {

@@ -2,6 +2,7 @@ package ed25519
 
 import (
 	"crypto/rand"
+
 	"golang.org/x/crypto/ed25519"
 )
 

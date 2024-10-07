@@ -4,10 +4,11 @@ import (
 	"crypto/ed25519"
 	"encoding/hex"
 	"encoding/json"
-	"github.com/btcsuite/btcd/btcutil/bech32"
-	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"
+
+	"github.com/btcsuite/btcd/btcutil/bech32"
+	"github.com/stretchr/testify/require"
 )
 
 func TestNewAddress(t *testing.T) {

@@ -8,11 +8,12 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"math/big"
+	"strings"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/okx/go-wallet-sdk/coins/ethereum"
 	"golang.org/x/crypto/sha3"
-	"math/big"
-	"strings"
 )
 
 type EthSigner interface {

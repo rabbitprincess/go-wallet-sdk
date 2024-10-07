@@ -3,9 +3,10 @@ package filecoin
 import (
 	"encoding/hex"
 	"encoding/json"
+	"math/big"
+
 	"github.com/dchest/blake2b"
 	"github.com/fxamacker/cbor"
-	"math/big"
 )
 
 type Message struct {

@@ -9,6 +9,7 @@ package types
 import (
 	"bytes"
 	"encoding/json"
+
 	"github.com/okx/go-wallet-sdk/crypto/base58"
 )
 

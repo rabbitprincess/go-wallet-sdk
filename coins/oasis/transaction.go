@@ -1,8 +1,9 @@
 package oasis
 
 import (
-	"github.com/okx/go-wallet-sdk/crypto/bech32"
 	"math/big"
+
+	"github.com/okx/go-wallet-sdk/crypto/bech32"
 )
 
 // Transfer is a stake transfer.

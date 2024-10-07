@@ -2,12 +2,13 @@ package terra
 
 import (
 	"encoding/hex"
+	"math/big"
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 	"github.com/okx/go-wallet-sdk/crypto/bip32"
 	"github.com/stretchr/testify/require"
 	"github.com/tyler-smith/go-bip39"
-	"math/big"
-	"testing"
 )
 
 // ///Tx details

@@ -10,11 +10,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/btcsuite/btcd/btcec/v2"
-	ec "github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"math/big"
 	"strconv"
 	"strings"
+
+	"github.com/btcsuite/btcd/btcec/v2"
+	ec "github.com/btcsuite/btcd/btcec/v2/ecdsa"
 )
 
 func addressFromVersionHash(version uint64, hash string) *Signer {

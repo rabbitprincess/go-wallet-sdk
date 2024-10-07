@@ -2,6 +2,7 @@ package tezos
 
 import (
 	"bytes"
+
 	"github.com/okx/go-wallet-sdk/coins/tezos/types"
 )
 

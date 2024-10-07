@@ -26,9 +26,10 @@ package ibc
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 	"io"
 	math_bits "math/bits"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 )
 
 // types1 "github.com/cosmos/ibc-go/v4/modules/core/02-client/types"

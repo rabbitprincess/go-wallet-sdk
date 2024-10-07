@@ -4,9 +4,10 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"math/big"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"golang.org/x/crypto/sha3"
-	"math/big"
 
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/golang/protobuf/proto"

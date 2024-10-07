@@ -5,9 +5,10 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 	"errors"
-	"github.com/okx/go-wallet-sdk/crypto/base58"
 	"math/big"
 	"strings"
+
+	"github.com/okx/go-wallet-sdk/crypto/base58"
 )
 
 func WriteUint64(buf *bytes.Buffer, value uint64) error {

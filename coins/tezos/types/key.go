@@ -12,9 +12,10 @@ import (
 	"crypto/rand"
 	"errors"
 	"fmt"
+	"strings"
+
 	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 	"golang.org/x/crypto/blake2b"
-	"strings"
 )
 
 // PassphraseFunc is a callback used to obtain a passphrase for decrypting a private key

@@ -10,6 +10,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+
 	"github.com/okx/go-wallet-sdk/coins/waves/crypto"
 	"github.com/okx/go-wallet-sdk/crypto/base58"
 )

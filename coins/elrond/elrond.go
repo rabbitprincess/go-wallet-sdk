@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"errors"
+
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"golang.org/x/crypto/sha3"
 )

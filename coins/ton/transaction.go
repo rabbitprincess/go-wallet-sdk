@@ -8,8 +8,9 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"errors"
-	"github.com/okx/go-wallet-sdk/coins/ton/tvm/cell"
 	"math/big"
+
+	"github.com/okx/go-wallet-sdk/coins/ton/tvm/cell"
 
 	"github.com/okx/go-wallet-sdk/coins/ton/address"
 	"github.com/okx/go-wallet-sdk/coins/ton/tlb"

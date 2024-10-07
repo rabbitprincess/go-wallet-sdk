@@ -20,9 +20,10 @@ package ethsecp256k1
 
 import (
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 	"io"
 	math_bits "math/bits"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
 )
 
 // PubKey defines a type alias for an ecdsa.PublicKey that implements

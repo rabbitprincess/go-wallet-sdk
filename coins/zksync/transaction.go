@@ -1,9 +1,10 @@
 package zksync
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 	"math/big"
 	"strconv"
+
+	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 )
 
 const (

@@ -3,9 +3,10 @@ package kaspa
 import (
 	"encoding/hex"
 	"encoding/json"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestTransfer(t *testing.T) {

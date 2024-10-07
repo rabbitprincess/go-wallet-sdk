@@ -2,11 +2,12 @@ package atom
 
 import (
 	"encoding/hex"
+	"math/big"
+	"testing"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/okx/go-wallet-sdk/coins/cosmos"
 	"github.com/stretchr/testify/require"
-	"math/big"
-	"testing"
 )
 
 func TestGetSignedTx(t *testing.T) {

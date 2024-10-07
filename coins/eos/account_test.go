@@ -4,14 +4,15 @@ import (
 	"bytes"
 	"encoding/hex"
 	"encoding/json"
-	"github.com/eoscanada/eos-go/ecc"
-	atomic_market "github.com/okx/go-wallet-sdk/coins/eos/atomic-market"
-	"github.com/okx/go-wallet-sdk/coins/eos/types"
-	"github.com/stretchr/testify/require"
 	"io"
 	"net/http"
 	"os"
 	"testing"
+
+	"github.com/eoscanada/eos-go/ecc"
+	atomic_market "github.com/okx/go-wallet-sdk/coins/eos/atomic-market"
+	"github.com/okx/go-wallet-sdk/coins/eos/types"
+	"github.com/stretchr/testify/require"
 )
 
 const (

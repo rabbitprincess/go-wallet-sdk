@@ -4,6 +4,8 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"errors"
+	"strconv"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
 	"github.com/kaspanet/go-secp256k1"
@@ -19,7 +21,6 @@ import (
 	"github.com/kaspanet/kaspad/util"
 	"github.com/kaspanet/kaspad/util/txmass"
 	"golang.org/x/crypto/blake2b"
-	"strconv"
 )
 
 type TxInput struct {

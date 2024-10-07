@@ -2,6 +2,7 @@ package base58
 
 import (
 	"crypto/sha256"
+
 	"github.com/btcsuite/btcutil/base58"
 )
 

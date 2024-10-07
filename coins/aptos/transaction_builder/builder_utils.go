@@ -4,11 +4,12 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/aptos/aptos_types"
-	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
 	"math/big"
 	"reflect"
 	"strconv"
+
+	"github.com/okx/go-wallet-sdk/coins/aptos/aptos_types"
+	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
 )
 
 func serializeArg(argVal any, argType aptos_types.TypeTag, serializer serde.Serializer) error {

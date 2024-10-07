@@ -3,8 +3,9 @@ package types
 import (
 	"crypto/sha256"
 	"errors"
-	"github.com/okx/go-wallet-sdk/crypto/base58"
 	"sync"
+
+	"github.com/okx/go-wallet-sdk/crypto/base58"
 )
 
 // ErrChecksum indicates that the checksum of a check-encoded string does not verify against

@@ -83,8 +83,9 @@ func SerializeOptionBytes(o []byte) ([]byte, error) {
 
 // SerializeBytes serialize bytes
 // There are two steps of serializing a bytes:
-//   Serialize the length as a 32 bit unsigned integer in little-endian.
-//   Serialize all items in it.
+//
+//	Serialize the length as a 32 bit unsigned integer in little-endian.
+//	Serialize all items in it.
 func SerializeBytes(items []byte) []byte {
 	// Empty fix vector bytes
 	if len(items) == 0 {
@@ -103,9 +104,10 @@ func SerializeBytes(items []byte) []byte {
 
 // SerializeTable serialize table
 // The serializing steps are same as table:
-//    Serialize the full size in bytes as a 32 bit unsigned integer in little-endian.
-//    Serialize all offset of fields as 32 bit unsigned integer in little-endian.
-//    Serialize all fields in it in the order they are declared.
+//
+//	Serialize the full size in bytes as a 32 bit unsigned integer in little-endian.
+//	Serialize all offset of fields as 32 bit unsigned integer in little-endian.
+//	Serialize all fields in it in the order they are declared.
 func SerializeTable(fields [][]byte) []byte {
 	size := u32Size
 	offsets := make([]uint, len(fields))
@@ -249,8 +251,9 @@ func SerializeOption(o Serializer) ([]byte, error) {
 
 // SerializeFixVec serialize fixvec vector
 // There are two steps of serializing a fixvec:
-//   Serialize the length as a 32 bit unsigned integer in little-endian.
-//   Serialize all items in it.
+//
+//	Serialize the length as a 32 bit unsigned integer in little-endian.
+//	Serialize all items in it.
 func SerializeFixVec(items [][]byte) []byte {
 	// Empty fix vector bytes
 	if len(items) == 0 {
@@ -272,9 +275,10 @@ func SerializeFixVec(items [][]byte) []byte {
 
 // SerializeDynVec serialize dynvec
 // There are three steps of serializing a dynvec:
-//    Serialize the full size in bytes as a 32 bit unsigned integer in little-endian.
-//    Serialize all offset of items as 32 bit unsigned integer in little-endian.
-//    Serialize all items in it.
+//
+//	Serialize the full size in bytes as a 32 bit unsigned integer in little-endian.
+//	Serialize all offset of items as 32 bit unsigned integer in little-endian.
+//	Serialize all items in it.
 func SerializeDynVec(items [][]byte) []byte {
 	// Start with u32Size
 	size := u32Size

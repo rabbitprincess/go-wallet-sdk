@@ -21,12 +21,13 @@ package secp256k1
 import (
 	"crypto/cipher"
 	"fmt"
+	"io"
+	"math/big"
+
 	secp256k1BTCD "github.com/btcsuite/btcd/btcec"
 	"github.com/ethereum/go-ethereum/common"
 	"go.dedis.ch/kyber/v3"
 	"go.dedis.ch/kyber/v3/util/random"
-	"io"
-	"math/big"
 )
 
 var GroupOrder = secp256k1BTCD.S256().N

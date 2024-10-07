@@ -6,8 +6,9 @@ package cell
 
 import (
 	"encoding/binary"
-	"github.com/okx/go-wallet-sdk/coins/ton/address"
 	"math/big"
+
+	"github.com/okx/go-wallet-sdk/coins/ton/address"
 )
 
 type Builder struct {

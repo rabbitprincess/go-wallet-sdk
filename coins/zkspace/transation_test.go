@@ -4,11 +4,12 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/zksync/core"
-	"github.com/stretchr/testify/require"
 	"math/big"
 	"strings"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/zksync/core"
+	"github.com/stretchr/testify/require"
 )
 
 const l1PrivateKey = "0x559376194bb4c9a9dfb33fde4a2ab15daa8a899a3f43dee787046f57d5f7b10a"

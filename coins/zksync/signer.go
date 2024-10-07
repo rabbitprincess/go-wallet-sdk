@@ -2,8 +2,9 @@ package zksync
 
 import (
 	"encoding/hex"
-	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 	"math/big"
+
+	"github.com/okx/go-wallet-sdk/coins/zksync/core"
 )
 
 type signer struct {

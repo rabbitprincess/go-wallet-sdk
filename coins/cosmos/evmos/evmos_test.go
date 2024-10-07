@@ -1,10 +1,11 @@
 package evmos
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/cosmos"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos"
+	"github.com/stretchr/testify/require"
 )
 
 // https://rest.bd.evmos.org:1317/cosmos/auth/v1beta1/accounts/evmos1rvs5xph4l3px2efynqsthus8p6r4exyrue82uy

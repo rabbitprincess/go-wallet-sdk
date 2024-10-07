@@ -2,9 +2,10 @@ package eos
 
 import (
 	"encoding/hex"
-	"github.com/okx/go-wallet-sdk/coins/eos/types"
 	"reflect"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/eos/types"
 )
 
 func TestNewTransaction(t *testing.T) {

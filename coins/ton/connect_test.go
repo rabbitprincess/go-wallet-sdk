@@ -7,9 +7,10 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"testing"
+
 	"github.com/okx/go-wallet-sdk/coins/ton/tvm/cell"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestFromBOC(t *testing.T) {

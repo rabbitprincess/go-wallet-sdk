@@ -4,6 +4,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"errors"
+
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 )

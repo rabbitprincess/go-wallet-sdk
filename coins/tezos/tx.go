@@ -3,6 +3,7 @@ package tezos
 import (
 	"errors"
 	"fmt"
+
 	"github.com/okx/go-wallet-sdk/coins/tezos/types"
 )
 

@@ -10,10 +10,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"math/big"
+
 	"github.com/okx/go-wallet-sdk/coins/ton/address"
 	"github.com/okx/go-wallet-sdk/coins/ton/tlb"
 	"github.com/okx/go-wallet-sdk/coins/ton/ton/wallet"
-	"math/big"
 )
 
 const (

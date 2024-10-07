@@ -8,8 +8,9 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"fmt"
-	"github.com/eoscanada/eos-go/ecc"
 	"time"
+
+	"github.com/eoscanada/eos-go/ecc"
 )
 
 // TxOptions represents options you want to pass to the transaction

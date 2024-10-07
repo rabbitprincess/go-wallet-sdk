@@ -6,8 +6,9 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/ton/ton/wallet"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/ton/ton/wallet"
 
 	"github.com/stretchr/testify/assert"
 )

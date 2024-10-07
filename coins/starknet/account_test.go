@@ -2,9 +2,10 @@ package starknet
 
 import (
 	"encoding/json"
-	"github.com/stretchr/testify/assert"
 	"math/big"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewKeyPair(t *testing.T) {

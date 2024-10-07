@@ -1,9 +1,10 @@
 package bip32
 
 import (
-	bip32 "github.com/tyler-smith/go-bip32"
 	"strconv"
 	"strings"
+
+	bip32 "github.com/tyler-smith/go-bip32"
 )
 
 const (

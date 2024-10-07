@@ -3,10 +3,11 @@ package aptos_types
 import (
 	"encoding/hex"
 	"errors"
-	"github.com/okx/go-wallet-sdk/coins/aptos/bcs"
-	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
 	"regexp"
 	"strings"
+
+	"github.com/okx/go-wallet-sdk/coins/aptos/bcs"
+	"github.com/okx/go-wallet-sdk/coins/aptos/serde"
 )
 
 var ErrNullObject = errors.New("cannot serialize null object")

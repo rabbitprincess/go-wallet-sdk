@@ -5,6 +5,7 @@ import (
 	"crypto/sha512"
 	"encoding/hex"
 	"fmt"
+
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/okx/go-wallet-sdk/coins/oasis/cbor"
 )

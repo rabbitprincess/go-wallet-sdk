@@ -7,6 +7,9 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"io"
+	"reflect"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
@@ -18,8 +21,6 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/okx/go-wallet-sdk/coins/bitcoin/doginals"
-	"io"
-	"reflect"
 )
 
 var (

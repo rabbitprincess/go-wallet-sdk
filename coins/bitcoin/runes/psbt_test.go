@@ -4,12 +4,13 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
+	"testing"
+
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/btcutil/psbt"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/okx/go-wallet-sdk/coins/bitcoin"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 // https://mempool.space/testnet/tx/766d32e560fca19f22ee3cf526edd00c5fbfd2f9833b5ff51fb64d3564321833

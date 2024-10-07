@@ -2,10 +2,11 @@ package avax
 
 import (
 	"encoding/hex"
-	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/stretchr/testify/assert"
 	"math"
 	"testing"
+
+	"github.com/btcsuite/btcd/btcec/v2"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSign(t *testing.T) {

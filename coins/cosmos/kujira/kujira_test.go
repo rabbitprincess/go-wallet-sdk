@@ -1,10 +1,11 @@
 package kujira
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/cosmos"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos"
+	"github.com/stretchr/testify/require"
 )
 
 // https://rest.kujira.ccvalidators.com/cosmos/auth/v1beta1/accounts/kujira1rvs5xph4l3px2efynqsthus8p6r4exyr0s5utx

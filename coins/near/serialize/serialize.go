@@ -4,9 +4,10 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"math/big"
+
 	"github.com/okx/go-wallet-sdk/util"
 	"github.com/shopspring/decimal"
-	"math/big"
 )
 
 const (

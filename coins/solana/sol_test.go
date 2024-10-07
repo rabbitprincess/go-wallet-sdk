@@ -2,8 +2,9 @@ package solana
 
 import (
 	"encoding/hex"
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 
 	"github.com/okx/go-wallet-sdk/coins/solana/base"
 	"github.com/okx/go-wallet-sdk/coins/solana/token"

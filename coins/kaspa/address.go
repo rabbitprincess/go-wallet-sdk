@@ -2,6 +2,7 @@ package kaspa
 
 import (
 	"encoding/hex"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
 	"github.com/kaspanet/kaspad/domain/dagconfig"

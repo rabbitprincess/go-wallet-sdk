@@ -4,8 +4,9 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/btcsuite/btcd/btcec/v2"
 	"math/big"
+
+	"github.com/btcsuite/btcd/btcec/v2"
 
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/ethereum/go-ethereum/rlp"

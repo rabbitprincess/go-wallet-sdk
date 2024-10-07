@@ -5,12 +5,13 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 	"errors"
+	"strconv"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"strconv"
 )
 
 type InscriptionData struct {

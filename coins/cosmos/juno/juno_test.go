@@ -1,10 +1,11 @@
 package juno
 
 import (
-	"github.com/okx/go-wallet-sdk/coins/cosmos"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos"
+	"github.com/stretchr/testify/require"
 )
 
 // https://lcd-juno.itastakers.com/cosmos/auth/v1beta1/accounts/juno1rvs5xph4l3px2efynqsthus8p6r4exyrg24lps

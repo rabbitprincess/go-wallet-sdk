@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/amino"
 	"math/big"
 	"strconv"
 	"strings"
 	"testing"
+
+	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/amino"
 )
 
 // NOTE: never use new(Dec) or else we will panic unmarshalling into the

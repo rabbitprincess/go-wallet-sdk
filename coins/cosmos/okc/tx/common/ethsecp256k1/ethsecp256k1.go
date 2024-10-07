@@ -2,6 +2,7 @@ package ethsecp256k1
 
 import (
 	"bytes"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/amino"
 	"github.com/okx/go-wallet-sdk/coins/cosmos/okc/tx/tendermint"
