@@ -142,16 +142,10 @@ func fieldSquare(y *fieldElt) *fieldElt {
 	return fieldEltFromBigInt(newFieldZero().int().Exp(y.int(), two, q))
 }
 
-// sqrtPower is s.t. n^sqrtPower≡sqrt(n) mod q, if n has a root at all. See
-// https://math.stackexchange.com/a/1816280, for instance
-//
-// What I'm calling sqrtPower is called q on the s256 struct. (See
-// btcec.initS256), which is confusing because the "Q" in "QPlus1Div4" refers to
-// the field characteristic
-var sqrtPower = s256.QPlus1Div4()
-
 // maybeSqrtInField returns a square root of v, if it has any, else nil
 func maybeSqrtInField(v *fieldElt) *fieldElt {
+	q, _ := new(big.Int).SetString("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F", 16)
+	sqrtPower := new(big.Int).Rsh(new(big.Int).Add(q, big.NewInt(1)), 2)
 	s := newFieldZero()
 	s.int().Exp(v.int(), sqrtPower, q)
 	if !fieldSquare(s).Equal(v) {
