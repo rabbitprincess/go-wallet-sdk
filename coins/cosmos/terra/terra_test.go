@@ -6,9 +6,8 @@ import (
 	"testing"
 
 	"github.com/okx/go-wallet-sdk/coins/cosmos/types"
-	"github.com/okx/go-wallet-sdk/crypto/bip32"
+	"github.com/okx/go-wallet-sdk/crypto/hdwallet"
 	"github.com/stretchr/testify/require"
-	"github.com/tyler-smith/go-bip39"
 )
 
 // ///Tx details
@@ -20,11 +19,11 @@ import (
 // curl -X POST -d '{"tx_bytes":"CrQECrEECiYvdGVycmEud2FzbS52MWJldGExLk1zZ0V4ZWN1dGVDb250cmFjdBKGBAosdGVycmExZnJjZjM2anZxdmo0N2NyOWR5Z2Z4M3ZoNnB1cWY5ZWxtbm5zbDISLHRlcnJhMTR6ODByd3BkMGFsemo0eGR0Z3FkbWNxdDl3ZDl4ajVmZmQ2MHdwGqcDeyJleGVjdXRlX3N3YXBfb3BlcmF0aW9ucyI6eyJtaW5pbXVtX3JlY2VpdmUiOiI1OTk3MTA2NyIsIm9mZmVyX2Ftb3VudCI6IjEwMDAwMDAiLCJvcGVyYXRpb25zIjpbeyJ0ZXJyYV9zd2FwIjp7ImFza19hc3NldF9pbmZvIjp7InRva2VuIjp7ImNvbnRyYWN0X2FkZHIiOiJ0ZXJyYTF1MHQzNWRyenl5MG11amo4cmtkeXpoZTI2NHVsczR1ZzN3ZHAzeCJ9fSwib2ZmZXJfYXNzZXRfaW5mbyI6eyJuYXRpdmVfdG9rZW4iOnsiZGVub20iOiJ1bHVuYSJ9fX19LHsidGVycmFfc3dhcCI6eyJhc2tfYXNzZXRfaW5mbyI6eyJuYXRpdmVfdG9rZW4iOnsiZGVub20iOiJ1dXNkIn19LCJvZmZlcl9hc3NldF9pbmZvIjp7InRva2VuIjp7ImNvbnRyYWN0X2FkZHIiOiJ0ZXJyYTF1MHQzNWRyenl5MG11amo4cmtkeXpoZTI2NHVsczR1ZzN3ZHAzeCJ9fX19XX19ElgKUApGCh8vY29zbW9zLmNyeXB0by5zZWNwMjU2azEuUHViS2V5EiMKIQKwapSLujUw96LqDzoNC8IPvknM/CMOrCfQndwqW0esaxIECgIIfxgGEgQQwIQ9GkC1B1CZIxMo9npRaMugwWQysf2HuPkZZw3jy5dhqcSiRmmWn9vqEHmOYltmOLTdkoHt+OdNQAUvM4+P/Xm5/VYL","mode":"BROADCAST_MODE_SYNC"}' https://bombay-lcd.terra.dev/cosmos/tx/v1beta1/txs
 func TestNewAddress(t *testing.T) {
 	mnemonic := "arena special tunnel keen skate chapter media scare injury indoor topic aware autumn lecture depth lava legal raccoon clog pulp renew diagram upper blade"
-	ret := bip39.IsMnemonicValid(mnemonic)
+	ret := hdwallet.IsMnemonicValid(mnemonic)
 	require.True(t, ret)
-	seed, err := bip39.NewSeedWithErrorChecking(mnemonic, "")
+	seed, err := hdwallet.NewSeedWithErrorChecking(mnemonic, "")
 	require.Nil(t, err)
-	masterKey, _ := bip32.NewMasterKey(seed)
+	masterKey, _ := hdwallet.NewMasterKey(seed)
 	key, _ := masterKey.NewChildKeyByChainId(330)
 	privateKeyHex := hex.EncodeToString(key.Key.Key)
 	address, err := NewAddress(privateKeyHex)
@@ -37,11 +36,11 @@ func TestNewAddress(t *testing.T) {
 
 func TestTransfer(t *testing.T) {
 	mnemonic := "arena special tunnel keen skate chapter media scare injury indoor topic aware autumn lecture depth lava legal raccoon clog pulp renew diagram upper blade"
-	ret := bip39.IsMnemonicValid(mnemonic)
+	ret := hdwallet.IsMnemonicValid(mnemonic)
 	require.True(t, ret)
-	seed, err := bip39.NewSeedWithErrorChecking(mnemonic, "")
+	seed, err := hdwallet.NewSeedWithErrorChecking(mnemonic, "")
 	require.Nil(t, err)
-	masterKey, _ := bip32.NewMasterKey(seed)
+	masterKey, _ := hdwallet.NewMasterKey(seed)
 	key, _ := masterKey.NewChildKeyByChainId(330)
 	privateKeyHex := hex.EncodeToString(key.Key.Key)
 	input := TransactionInput{}
@@ -64,11 +63,11 @@ func TestTransfer(t *testing.T) {
 
 func TestTokenTransfer(t *testing.T) {
 	mnemonic := "arena special tunnel keen skate chapter media scare injury indoor topic aware autumn lecture depth lava legal raccoon clog pulp renew diagram upper blade"
-	ret := bip39.IsMnemonicValid(mnemonic)
+	ret := hdwallet.IsMnemonicValid(mnemonic)
 	require.True(t, ret)
-	seed, err := bip39.NewSeedWithErrorChecking(mnemonic, "")
+	seed, err := hdwallet.NewSeedWithErrorChecking(mnemonic, "")
 	require.Nil(t, err)
-	masterKey, _ := bip32.NewMasterKey(seed)
+	masterKey, _ := hdwallet.NewMasterKey(seed)
 	key, _ := masterKey.NewChildKeyByChainId(330)
 	privateKeyHex := hex.EncodeToString(key.Key.Key)
 	input := TransactionInput{}

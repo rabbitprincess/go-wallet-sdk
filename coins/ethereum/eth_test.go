@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/okx/go-wallet-sdk/coins/ethereum/token"
-	"github.com/okx/go-wallet-sdk/crypto/bip32"
+	"github.com/okx/go-wallet-sdk/crypto/hdwallet"
 )
 
 func TestPubKeyToAddr(t *testing.T) {
@@ -120,14 +120,14 @@ func TestEth3(t *testing.T) {
 }
 
 // testcode https://sepolia.etherscan.io/address/0x2354aa76877c6043bf30119eb23bf3fdd02c4808
-func TestBIP39(t *testing.T) {
+func TestBIP32(t *testing.T) {
 	// get menmonic
-	mnemonic, err := bip32.GenerateMnemonic()
+	mnemonic, err := hdwallet.GenerateMnemonic()
 	assert.NoError(t, err)
 	fmt.Println(mnemonic)
 	// get derived key
-	hdPath := bip32.GetDerivedPath(0)
-	derivePrivateKey, err := bip32.GetDerivedPrivateKey(mnemonic, hdPath)
+	hdPath := hdwallet.GetDerivedPath(0)
+	derivePrivateKey, err := hdwallet.GetDerivedPrivateKey(mnemonic, hdPath)
 	assert.NoError(t, err)
 	fmt.Println("generate derived private key:", derivePrivateKey, ",derived path: ", hdPath)
 

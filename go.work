@@ -1,7 +1,9 @@
 go 1.19
 
 use (
+	./coins/cosmos
 	./coins/ethereum
+	./coins/solana
 	./crypto
 	./util
 )

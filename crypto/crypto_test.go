@@ -21,18 +21,17 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/okx/go-wallet-sdk/crypto/base58"
-	"github.com/okx/go-wallet-sdk/crypto/bip32"
-	bip39 "github.com/tyler-smith/go-bip39"
+	"github.com/okx/go-wallet-sdk/crypto/hdwallet"
 	"golang.org/x/crypto/sha3"
 )
 
 func TestNewChildKeyByPathString(t *testing.T) {
-	entropy, _ := bip39.NewEntropy(256)
-	mnemonic, _ := bip39.NewMnemonic(entropy)
+	entropy, _ := hdwallet.NewEntropy(256)
+	mnemonic, _ := hdwallet.NewMnemonic(entropy)
 	fmt.Println(hex.EncodeToString(entropy), mnemonic)
 
-	seed := bip39.NewSeed(mnemonic, "")
-	rp, _ := bip32.NewMasterKey(seed)
+	seed := hdwallet.NewSeed(mnemonic, "")
+	rp, _ := hdwallet.NewMasterKey(seed)
 
 	c, _ := rp.NewChildKeyByPathString("m/44'/118'/0'/0/0")
 	childPrivateKey := hex.EncodeToString(c.Key.Key)
@@ -66,8 +65,8 @@ func TestSignMessage(t *testing.T) {
 		secp256k1Signature := items[6]
 		ed25519Signature := items[7]
 
-		seed := bip39.NewSeed(mnemonic, "")
-		rp, _ := bip32.NewMasterKey(seed)
+		seed := hdwallet.NewSeed(mnemonic, "")
+		rp, _ := hdwallet.NewMasterKey(seed)
 		rootPrivateKey2 := hex.EncodeToString(rp.Key.Key)
 		if rootPrivateKey2 != rootPrivateKey {
 			t.Error("rootPrivateKey not match", rootPrivateKey, rootPrivateKey2)
@@ -75,7 +74,7 @@ func TestSignMessage(t *testing.T) {
 			continue
 		}
 		// m/44'/0'/0'/0/0
-		c, _ := rp.NewChildKeyByPath(bip32.FirstHardenedChild+44, 0|bip32.FirstHardenedChild, bip32.FirstHardenedChild, 0, 0)
+		c, _ := rp.NewChildKeyByPath(hdwallet.FirstHardenedChild+44, 0|hdwallet.FirstHardenedChild, hdwallet.FirstHardenedChild, 0, 0)
 		childPrivateKey2 := hex.EncodeToString(c.Key.Key)
 		if childPrivateKey2 != childPrivateKey {
 			t.Error("childPrivateKey not match", childPrivateKey, childPrivateKey2)

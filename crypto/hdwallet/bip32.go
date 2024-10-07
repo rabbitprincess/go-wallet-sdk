@@ -1,10 +1,10 @@
-package bip32
+package hdwallet
 
 import (
 	"strconv"
 	"strings"
 
-	bip32 "github.com/tyler-smith/go-bip32"
+	"github.com/tyler-smith/go-bip32"
 )
 
 const (

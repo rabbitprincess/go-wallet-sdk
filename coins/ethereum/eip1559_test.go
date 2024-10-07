@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/okx/go-wallet-sdk/crypto/bip32"
+	"github.com/okx/go-wallet-sdk/crypto/hdwallet"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -16,8 +16,8 @@ func TestSignEip1559Tx(t *testing.T) {
 	mnemonic := "limb alter vapor lava clown pigeon exist pulp ride dry wage middle battle tell suspect pigeon want thrive sugar smoke merit tower curve local"
 	fmt.Println(mnemonic)
 	// get derived key
-	hdPath := bip32.GetDerivedPath(0)
-	derivePrivateKey, err := bip32.GetDerivedPrivateKey(mnemonic, hdPath)
+	hdPath := hdwallet.GetDerivedPath(0)
+	derivePrivateKey, err := hdwallet.GetDerivedPrivateKey(mnemonic, hdPath)
 	assert.NoError(t, err)
 	fmt.Println("generate derived private key:", derivePrivateKey, ",derived path: ", hdPath)
 

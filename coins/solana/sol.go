@@ -8,12 +8,12 @@ import (
 
 	associatedtokenaccount "github.com/okx/go-wallet-sdk/coins/solana/associated-token-account"
 	computebudget "github.com/okx/go-wallet-sdk/coins/solana/compute-budget"
-	"github.com/tyler-smith/go-bip39"
 
 	"github.com/okx/go-wallet-sdk/coins/solana/base"
 	"github.com/okx/go-wallet-sdk/coins/solana/system"
 	"github.com/okx/go-wallet-sdk/coins/solana/token"
 	"github.com/okx/go-wallet-sdk/crypto/base58"
+	"github.com/okx/go-wallet-sdk/crypto/hdwallet"
 )
 
 type RawTransaction struct {
@@ -500,7 +500,7 @@ func DecodeAndMultiSign(unsignedTx string, privateKey string, recentBlockHash st
 	signers = append(signers, privateKey)
 
 	for _, s := range ut.BizId {
-		seedBytes := bip39.NewSeed(ut.BizType, s)
+		seedBytes := hdwallet.NewSeed(ut.BizType, s)
 		extra := ed25519.NewKeyFromSeed(seedBytes[:32])
 		extraHex := hex.EncodeToString(base.PrivateKey(extra).Bytes())
 		signers = append(signers, extraHex)

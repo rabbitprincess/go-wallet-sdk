@@ -1,4 +1,4 @@
-package bip32
+package hdwallet
 
 import (
 	"encoding/hex"
@@ -32,4 +32,24 @@ func GetDerivedPrivateKey(mnemonic string, hdPath string) (string, error) {
 	}
 	childPrivateKey := hex.EncodeToString(c.Key.Key)
 	return childPrivateKey, nil
+}
+
+func IsMnemonicValid(mnemonic string) bool {
+	return bip39.IsMnemonicValid(mnemonic)
+}
+
+func NewSeedWithErrorChecking(mnemonic, password string) ([]byte, error) {
+	return bip39.NewSeedWithErrorChecking(mnemonic, password)
+}
+
+func NewSeed(mnemonic string, password string) []byte {
+	return bip39.NewSeed(mnemonic, password)
+}
+
+func NewEntropy(bits int) ([]byte, error) {
+	return bip39.NewEntropy(bits)
+}
+
+func NewMnemonic(entropy []byte) (string, error) {
+	return bip39.NewMnemonic(entropy)
 }
