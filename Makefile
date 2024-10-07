@@ -1,5 +1,18 @@
+build:
+	@mkdir -p ./bin; \
+	for moddir in $$(find . -name 'go.mod' -exec dirname {} \;); do \
+		basename=$$(basename $$moddir); \
+		echo "Building $$basename..."; \
+		cd $$moddir && go build -o ../bin/$$basename; \
+	done
+.PHONY: build
+
 test:
-	go test -v all
+	@p=$(shell pwd); \
+	for module in $$(grep 'use' go.work | awk '{print $$2}'); do \
+		echo "Running tests in $$module..."; \
+		cd $$p/$$module && go test ./...; \
+	done
 .PHONY: test
 
 format:
