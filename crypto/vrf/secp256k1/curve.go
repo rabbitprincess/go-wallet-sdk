@@ -19,7 +19,7 @@ import (
 
 	"go.dedis.ch/kyber/v3"
 
-	secp256k1BTCD "github.com/btcsuite/btcd/btcec"
+	secp256k1BTCD "github.com/btcsuite/btcd/btcec/v2"
 )
 
 // Secp256k1 represents the secp256k1 group.

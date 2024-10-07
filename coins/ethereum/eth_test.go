@@ -11,6 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/okx/go-wallet-sdk/coins/ethereum/token"
+	"github.com/okx/go-wallet-sdk/crypto/bip32"
 )
 
 func TestPubKeyToAddr(t *testing.T) {
@@ -116,4 +117,47 @@ func TestEth3(t *testing.T) {
 		require.Nil(t, err)
 		t.Log("tx : ", tx)
 	})
+}
+
+// testcode https://sepolia.etherscan.io/address/0x2354aa76877c6043bf30119eb23bf3fdd02c4808
+func TestBIP39(t *testing.T) {
+	// get menmonic
+	mnemonic, err := bip32.GenerateMnemonic()
+	assert.NoError(t, err)
+	fmt.Println(mnemonic)
+	// get derived key
+	hdPath := bip32.GetDerivedPath(0)
+	derivePrivateKey, err := bip32.GetDerivedPrivateKey(mnemonic, hdPath)
+	assert.NoError(t, err)
+	fmt.Println("generate derived private key:", derivePrivateKey, ",derived path: ", hdPath)
+
+	// get new address
+	prvBytes, err := hex.DecodeString(derivePrivateKey)
+	require.NoError(t, err)
+	prv, pub := btcec.PrivKeyFromBytes(prvBytes)
+	require.NotNil(t, prv)
+	newAddress := GetNewAddress(pub)
+	fmt.Println("generate new address:", newAddress)
+
+	// Verify address
+	valid := ValidateAddress(newAddress)
+	fmt.Println("verify address isValid:", valid)
+
+	// Sign a transaction
+	txJson := `{
+				"chainId":"11155111",
+				"txType":2,
+				"nonce":"1",
+				"isToken":false,
+				"to":"0x31c514837ee0f6062eaffb0882d764170a178004",
+				"value":"21000",
+				"gasLimit":"21000",
+				"gasPrice":"66799178286",
+				"maxFeePerGas":"20000000000",
+				"maxPriorityFeePerGas":"1500000000"
+			}`
+	//02a501a1622ecdbdca2ff9ae36dfcf58603006e8fd5ddd4809e8b8b9b8a4cf9f8b
+	signedTx, err := SignTransaction(txJson, derivePrivateKey)
+	assert.NoError(t, err)
+	fmt.Println("signed tx:", signedTx)
 }

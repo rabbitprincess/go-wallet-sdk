@@ -7,7 +7,6 @@ import (
 	"math/big"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/ethereum/go-ethereum/rlp"
 	"github.com/okx/go-wallet-sdk/crypto"

@@ -2,6 +2,7 @@ package abi
 
 import (
 	"fmt"
+	"log"
 	"math/big"
 	"reflect"
 	"strings"
@@ -78,7 +79,7 @@ type Argument struct {
 
 func (arg Arguments) Pack(params ...interface{}) []byte {
 	if len(arg) != len(params) {
-		fmt.Errorf("inconsistent number of parameters")
+		log.Print("inconsistent number of parameters")
 	}
 
 	var value []byte
