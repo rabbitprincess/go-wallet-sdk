@@ -1,6 +1,6 @@
 module github.com/okx/go-wallet-sdk/coins/bitcoin
 
-go 1.19
+go 1.23.2
 
 require (
 	github.com/btcsuite/btcd v0.23.4

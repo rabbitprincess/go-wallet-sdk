@@ -1,6 +1,6 @@
 module github.com/okx/go-wallet-sdk/coins/oasis
 
-go 1.19
+go 1.23.2
 
 require (
 	github.com/btcsuite/btcd/btcutil v1.1.3

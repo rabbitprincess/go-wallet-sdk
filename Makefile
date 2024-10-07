@@ -1,25 +1,9 @@
-build:
-	@mkdir -p ./bin; \
-	for moddir in $$(find . -name 'go.mod' -exec dirname {} \;); do \
-		basename=$$(basename $$moddir); \
-		echo "Building $$basename..."; \
-		cd $$moddir && go build -o ../bin/$$basename; \
-	done
-.PHONY: build
-
 test:
 	@p=$(shell pwd); \
-	for module in $$(grep 'use' go.work | awk '{print $$2}'); do \
-		echo "Running tests in $$module..."; \
-		cd $$p/$$module && go test ./...; \
+	string="aptos,bitcoin,elrond,ethereum,flow,helium,near,oasis,polkadot,stacks,sui,tron,zil,zksync,avax,cosmos,eos,filecoin,harmony,kaspa,nervos,oracle,solana,starknet,tezos,waves,zkspace"; \
+	array=$$(echo $$string | tr ',' ' '); \
+	for var in $$array; do \
+		echo "Testing $$var"; \
+		cd $$p/coins/$$var && go mod tidy && go test -v && echo "Test $$var success.\n"; \
 	done
 .PHONY: test
-
-format:
-	@find $(WORKSPACE_DIR) -name "*.go" | while read -r gofile; do \
-		gofmt -w "$$gofile"; \
-		goimports -w "$$gofile"; \
-		gopls format "$$gofile"; \
-		echo "Formatted: $$gofile"; \
-	done
-.PHONY: format

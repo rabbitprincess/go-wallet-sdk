@@ -1,6 +1,6 @@
 module github.com/okx/go-wallet-sdk/coins/oracle/vrf
 
-go 1.19
+go 1.23.2
 
 require (
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2

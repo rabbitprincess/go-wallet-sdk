@@ -1,6 +1,6 @@
 module github.com/okx/go-wallet-sdk/coins/zkspace
 
-go 1.19
+go 1.23.2
 
 require (
 	github.com/okx/go-wallet-sdk/coins/zksync v0.0.0-20231109150741-14b4d76796cb
