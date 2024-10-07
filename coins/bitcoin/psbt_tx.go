@@ -130,9 +130,9 @@ func GenerateSignedListingPSBTBase64(in *TxInput, out *TxOutput, network *chainc
 	}
 	witnessUtxo := wire.NewTxOut(in.Amount, prevPkScript)
 	prevOuts := map[wire.OutPoint]*wire.TxOut{
-		wire.OutPoint{Index: 0}: dummyWitnessUtxo,
-		wire.OutPoint{Index: 1}: dummyWitnessUtxo,
-		*prevOut:                witnessUtxo,
+		{Index: 0}: dummyWitnessUtxo,
+		{Index: 1}: dummyWitnessUtxo,
+		*prevOut:   witnessUtxo,
 	}
 	prevOutputFetcher := txscript.NewMultiPrevOutFetcher(prevOuts)
 
@@ -1085,9 +1085,9 @@ func GenerateMPCUnsignedListingPSBT(in *TxInput, out *TxOutput, network *chaincf
 	}
 	witnessUtxo := wire.NewTxOut(in.Amount, prevPkScript)
 	prevOuts := map[wire.OutPoint]*wire.TxOut{
-		wire.OutPoint{Index: 0}: dummyWitnessUtxo,
-		wire.OutPoint{Index: 1}: dummyWitnessUtxo,
-		*prevOut:                witnessUtxo,
+		{Index: 0}: dummyWitnessUtxo,
+		{Index: 1}: dummyWitnessUtxo,
+		*prevOut:   witnessUtxo,
 	}
 	prevOutputFetcher := txscript.NewMultiPrevOutFetcher(prevOuts)
 
