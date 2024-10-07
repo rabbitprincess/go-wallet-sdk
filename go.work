@@ -1,9 +1,32 @@
 go 1.19
 
 use (
+	./coins/aptos
+	./coins/avax
+	./coins/bitcoin
 	./coins/cosmos
+	./coins/elrond
+	./coins/eos
 	./coins/ethereum
+	./coins/filecoin
+	./coins/flow
+	./coins/harmony
+	./coins/helium
+	./coins/kaspa
+	./coins/near
+	./coins/nervos
+	./coins/nostrassets
+	./coins/oasis
+	./coins/polkadot
 	./coins/solana
+	./coins/stacks
+	./coins/starknet
+	./coins/sui
+	./coins/tezos
+	./coins/ton
+	./coins/tron
+	./coins/waves
+	./coins/zil
 	./crypto
 	./util
 )
