@@ -3,7 +3,15 @@ package util
 import (
 	"fmt"
 	"math/big"
+	"strconv"
 )
+
+// Reverse reverses bytes in place (manipulates the underlying array)
+func Reverse(b []byte) {
+	for i, j := 0, len(b)-1; i < j; i, j = i+1, j-1 {
+		b[i], b[j] = b[j], b[i]
+	}
+}
 
 func ConvertToBigInt(v string) *big.Int {
 	b := new(big.Int)
@@ -29,9 +37,12 @@ func BigIntToUintBytes(i *big.Int, bytelen int) ([]byte, error) {
 	return res, nil
 }
 
-// Reverse reverses bytes in place (manipulates the underlying array)
-func Reverse(b []byte) {
-	for i, j := 0, len(b)-1; i < j; i, j = i+1, j-1 {
-		b[i], b[j] = b[j], b[i]
-	}
+func ConvertToUint32(v string) uint32 {
+	i, _ := strconv.Atoi(v)
+	return uint32(i)
+}
+
+func ConvertToUint64(v string) uint64 {
+	i, _ := strconv.ParseUint(v, 10, 64)
+	return i
 }

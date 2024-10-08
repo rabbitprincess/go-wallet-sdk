@@ -330,7 +330,7 @@ func (build *TransactionBuilder) CalculateHash(pubKeyHex string) (string, error)
 		prevPkScripts = append(prevPkScripts, pkScript)
 
 		prevOuts.AddPrevOut(*outPoint, &wire.TxOut{
-			Value:    ConvertToBigInt(input.value).Int64(),
+			Value:    util.ConvertToBigInt(input.value).Int64(),
 			PkScript: pkScript,
 		})
 	}
@@ -341,7 +341,7 @@ func (build *TransactionBuilder) CalculateHash(pubKeyHex string) (string, error)
 		if err != nil {
 			return "", err
 		}
-		txOut := wire.NewTxOut(ConvertToBigInt(output.amount).Int64(), script)
+		txOut := wire.NewTxOut(util.ConvertToBigInt(output.amount).Int64(), script)
 		tx.TxOut = append(tx.TxOut, txOut)
 	}
 
@@ -401,7 +401,7 @@ func (build *TransactionBuilder) BuildWithSig(signatureHex, pubKeyHex string) (s
 		prevPkScripts = append(prevPkScripts, pkScript)
 
 		prevOuts.AddPrevOut(*outPoint, &wire.TxOut{
-			Value:    ConvertToBigInt(input.value).Int64(),
+			Value:    util.ConvertToBigInt(input.value).Int64(),
 			PkScript: pkScript,
 		})
 	}
@@ -412,7 +412,7 @@ func (build *TransactionBuilder) BuildWithSig(signatureHex, pubKeyHex string) (s
 		if err != nil {
 			return "", err
 		}
-		txOut := wire.NewTxOut(ConvertToBigInt(output.amount).Int64(), script)
+		txOut := wire.NewTxOut(util.ConvertToBigInt(output.amount).Int64(), script)
 		tx.TxOut = append(tx.TxOut, txOut)
 	}
 
