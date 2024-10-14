@@ -12,6 +12,7 @@ require (
 	github.com/okx/go-wallet-sdk/crypto v0.0.1
 	github.com/okx/go-wallet-sdk/util v0.0.1
 	github.com/stretchr/testify v1.9.0
+	lukechampine.com/uint128 v1.3.0
 )
 
 require (
