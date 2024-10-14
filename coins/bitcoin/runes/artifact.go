@@ -1,4 +1,4 @@
-package runestone
+package runes
 
 type Artifact struct {
 	Cenotaph  *Cenotaph

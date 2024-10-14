@@ -1,4 +1,4 @@
-package runestone
+package runes
 
 import (
 	"github.com/btcsuite/btcd/wire"

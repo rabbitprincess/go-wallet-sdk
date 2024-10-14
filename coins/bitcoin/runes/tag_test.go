@@ -1,4 +1,4 @@
-package runestone
+package runes
 
 import (
 	"testing"
