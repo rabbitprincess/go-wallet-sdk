@@ -24,6 +24,7 @@ func GetPsbtFromString(psbtStr string) (*psbt.Packet, error) {
 	}
 	return p, nil
 }
+
 func IsHexString(s string) bool {
 	if len(s) <= 1 {
 		return false

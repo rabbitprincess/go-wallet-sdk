@@ -124,6 +124,32 @@ func (build *TransactionBuilder) AddOutput2(address string, script string, amoun
 	build.outputs = append(build.outputs, output)
 }
 
+func (build *TransactionBuilder) FundRawTransaction(changeAddress string, feeRate int64) (*wire.MsgTx, error) {
+	totalInput := build.TotalInputAmount()
+	totalOutput := build.TotalOutputAmount()
+
+	view, _ := build.UtxoViewpoint()
+	tx, _ := build.Build()
+	vsize := GetTxVirtualSizeByView(btcutil.NewTx(tx), view)
+	fee := vsize * feeRate / 1000
+
+	if totalInput < totalOutput+fee {
+		return nil, fmt.Errorf("insufficient funds: need %d sats, but have %d sats", totalOutput+fee, totalInput)
+	}
+
+	changeAmount := totalInput - totalOutput - fee
+	if changeAmount > 0 {
+		changePkScript, err := AddrToPkScript(changeAddress, build.netParams)
+		if err != nil {
+			return nil, err
+		}
+		changeOutput := wire.NewTxOut(changeAmount, changePkScript)
+		build.tx.AddTxOut(changeOutput)
+	}
+
+	return build.tx, nil
+}
+
 func (build *TransactionBuilder) Build() (*wire.MsgTx, error) {
 	if len(build.inputs) == 0 || len(build.outputs) == 0 {
 		return nil, errors.New("invalid inputs or outputs")

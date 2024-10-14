@@ -20,10 +20,12 @@ func BuildingEdictTx(runeId RuneId, utxo []*bitcoin.TxInput, fromAddress, toAddr
 		builder.AddInput(input.TxId, input.VOut, input.PrivateKey, "", input.Address, input.Amount)
 	}
 
-	builder.AddOutput2("", hex.EncodeToString(rs), 0) // reveal the runestone
-	builder.AddOutput2(fromAddress, "", RUNE_POSTAGE) // return the change to the sender
-	builder.AddOutput2(toAddress, "", RUNE_POSTAGE)   // send the rune to the receiver
-	builder.AddOutput2("", "", RUNE_POSTAGE)          // fund the runestone
-
-	return builder.Build()
+	builder.AddOutput2("", hex.EncodeToString(rs), 0)           // reveal the runestone
+	builder.AddOutput2(fromAddress, "", RUNE_POSTAGE)           // return the change to the sender
+	builder.AddOutput2(toAddress, "", RUNE_POSTAGE)             // send the rune to the receiver
+	tx, err := builder.FundRawTransaction(fromAddress, feeRate) // fund the transaction
+	if err != nil {
+		return nil, err
+	}
+	return tx, nil
 }
